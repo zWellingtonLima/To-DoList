@@ -1,3 +1,13 @@
+/* Variables and Imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+
+:root {
+  --default-b-radius: 1.5rem;
+  --app-width: 60rem;
+  --app-gradient: linear-gradient(to bottom, #e36e9196,rgba(89, 0, 255, 0.459)) ;  
+}
+
+/* Reset */
 *,
 *::after,
 *::before {
@@ -13,11 +23,95 @@ html {
 
 body {
   box-sizing: border-box;
-}
-
-.container {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   background-image: url('./img/bg-img.jpg');
-  height: 100vh;
   background-size: cover;
   background-position: bottom;
+}
+
+.app-container {
+  background-image: var(--app-gradient);
+  width: var(--app-width);
+  border-radius: var(--default-b-radius);
+  color: #ffffffce;
+  padding: 2rem;
+  box-shadow: 0 1.5rem 4rem -2rem black;
+}
+
+.app-title {
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+}
+
+.todo-input {
+  width: 100%;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: var(--default-b-radius);
+  padding: 1rem 1.5rem;
+  font-size: 2.2rem;
+  background-color: #ffc31e77;
+  color: white;
+}
+
+.todo-input::placeholder {
+  color: #ffffff70;
+}
+
+.todos,
+.completed-todos,
+.uncompleted-todos {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.todo-item {
+  background-color: #f4f4f4bd;
+  padding: 1rem 1.5rem;
+  border-radius: var(--default-b-radius);
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.todo-item span {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  font-size: 1.6rem;
+}
+
+.todo-item input[type=checkbox] {
+  width: 2rem;
+  height: 2rem;
+  accent-color: rgba(164, 68, 255, 0.425);
+}
+
+.todo-item a svg{
+  pointer-events: none;
+  fill: rgba(89, 0, 255, 0.671);
+  width: 4.5rem;
+  height: 3.5rem;
+}
+
+.completed-todos .todo-item {
+  background-color: rgba(36, 240, 255, 0.336);
+  text-decoration: line-through;
+}
+
+.completed-todos .todo-item span {
+  color: white;
+}
+
+.completed-title {
+  font-size: 1.6rem;
+  margin: 1.4rem 0;
 }
