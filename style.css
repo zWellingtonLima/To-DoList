@@ -45,6 +45,7 @@ body {
 .app-title {
   font-size: 2.8rem;
   margin-bottom: 3rem;
+  text-shadow: 0 .3rem .1rem rgb(71, 89, 255);
 }
 
 .todo-input {
@@ -52,14 +53,14 @@ body {
   margin-bottom: 2rem;
   border: none;
   border-radius: var(--default-b-radius);
-  padding: 1rem 1.5rem;
-  font-size: 2.2rem;
-  background-color: #ffc31e77;
+  padding: 1.5rem;
+  font-size: 2rem;
+  background-color: #f1c4473d;
   color: white;
 }
 
 .todo-input::placeholder {
-  color: #ffffff70;
+  color: #ffffff91;
 }
 
 .todos,
