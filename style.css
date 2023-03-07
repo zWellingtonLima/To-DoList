@@ -103,6 +103,11 @@ body {
   height: 3.5rem;
 }
 
+.todo-item a:hover {
+  background-image: radial-gradient(rgba(164, 68, 255, 0.425), rgba(36, 240, 255, 0.336));
+  border-radius: var(--default-b-radius);
+}
+
 .completed-todos .todo-item {
   background-color: rgba(36, 240, 255, 0.336);
   text-decoration: line-through;
